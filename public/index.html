@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SMTP Checker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,300,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo1">SMTP</span>
+      <span class="logo2">Checker</span>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="form-wrapper">
+      <form id="check_form" method="post">
+        <div class="form-group"><label>Host</label><input type="text" name="host" ></div>
+        <div class="form-group"><label>Port</label><input type="text" name="port" ></div>
+        <div class="form-group checkbox"><label></label><input type="checkbox" name="secure">Uses Encryption</div>
+        <div class="form-group"><label>Username</label><input type="text" name="username"></div>
+        <div class="form-group"><label>Password</label><input type="password" name="password" ></div>
+        <div class="form-group"><label>From Email</label><input type="email" name="from_email"></div>
+        <div class="form-group"><label>To Email</label><input type="email" name="to_email" ></div>
+        <div class="form-group"><label></label><button type="submit">Check</button></div>
+      </form>
+      <div class="log_box">
+        <div class="log_header"><span>Console</span></div>
+        <div id="log"></div>
+      </div>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="smtp.js"></script>
+</body>
+</html>
