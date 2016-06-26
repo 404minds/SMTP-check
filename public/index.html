@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SMTP Checker</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test your SMTP mail server configuration for free. Verify and ensure your settings by sending a test email. Quick and handy tool for setting up services using SMTP mail servers.">
+  <meta name="keywords" content="smtp, online, check, mx, mail, server, free, test, SMTP checker, SMTP test">
+  <meta name="author" content="404Minds">
+  <title>SMTP Checker - Test your mail server (MX)</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,300,500' rel='stylesheet' type='text/css'>
 </head>
@@ -13,6 +19,8 @@
     </div>
   </header>
   <div class="wrapper">
+    <p class="detail">Test your SMTP mail server configuration.<br>
+    Just fill the form below and hit the ‘Check’ button. Don’t worry, we will not store any information that you provide.</p>
     <div class="form-wrapper">
       <form id="check_form" method="post">
         <div class="form-group"><label>Host</label><input type="text" name="host" ></div>
@@ -32,9 +40,10 @@
         <div class="log_header"><span>Console</span><span class="eraser" id="eraser">Clear</span></div>
         <div id="log"></div>
       </div>
+      <p class="issueMsg">Having issues? <a href="https://github.com/404minds/SMTP-check/issues">Report issue.</a></p>
     </div>
   </div>
-  <footer><p>Made with love by 404Minds</p>
+  <footer><p>Made with love by <a href="http://404minds.com/">404Minds</a></p>
   <span>Bangalore, India</span>
   </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

@@ -30,9 +30,10 @@ header {
 }
 
 .wrapper {
-  padding: 100px;
+  padding: 50px 100px;
   text-align: center;
   overflow: hidden;
+  margin-top: 30px;
 }
 .form-wrapper {
   display: flex;
@@ -148,12 +149,33 @@ span {
 
 }
 
+.error {
+  color: #f81b03;
+}
+.detail {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.45);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.issueMsg {
+  margin-top: 50px;
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.45);
+}
+
 footer {
   background-color: rgba(0,0,0,0.5);
   padding: 15px;
   display: flex;
   flex-direction: row;
 }
+
+
 
 footer p {
   font-style: italic;
@@ -163,6 +185,11 @@ footer p {
   font-size: 14px;
   font-weight: 400;
   color: rgba(255,255,255,0.7);
+}
+footer a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+
 }
 
 footer span {

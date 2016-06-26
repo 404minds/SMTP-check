@@ -13,7 +13,7 @@ form.addEventListener("submit", function(event) {
       $('.log_box').show();
       if (jqXHR.status !== 201) {
         var data = jqXHR.responseJSON;
-        logEl.innerHTML += '<p>Verification of SMTP credentials failed.';
+        logEl.innerHTML += '<p class="error">Verification of SMTP credentials failed.';
         if (data.code) logEl.innerHTML += '<p>Code: ' + data.code + '</p>';
         if (data.responseCode) logEl.innerHTML += '<p>Response Code: ' + data.responseCode + '</p>';
         if (data.hostname) logEl.innerHTML += '<p>Hostname: ' + data.hostname + '</p>';
@@ -38,7 +38,7 @@ $('#sendMail').click(function() {
       var logEl = document.getElementById("log");
       if (jqXHR.status !== 201) {
         var data = jqXHR.responseJSON;
-        logEl.innerHTML += '<p>Unable to send test mail</p>';
+        logEl.innerHTML += '<p class="error">Unable to send test mail</p>';
       } else {
         logEl.innerHTML += '<p>Congratulations! Test mail sent successfully.</p>';
       }
