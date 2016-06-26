@@ -22,15 +22,21 @@
         <div class="form-group"><label>Password</label><input type="password" name="password" ></div>
         <div class="form-group"><label>From Email</label><input type="email" name="from_email"></div>
         <div class="form-group"><label>To Email</label><input type="email" name="to_email" ></div>
-        <div class="form-group"><label></label><button type="submit">Check</button></div>
+        <div class="form-group">
+          <label></label>
+          <button type="submit">Check</button>
+          <button type="button" id="sendMail">Send Test Mail</button>
+        </div>
       </form>
       <div class="log_box">
-        <div class="log_header"><span>Console</span></div>
+        <div class="log_header"><span>Console</span><span class="eraser" id="eraser">Clear</span></div>
         <div id="log"></div>
       </div>
     </div>
   </div>
-  <footer></footer>
+  <footer><p>Made with love by 404Minds</p>
+  <span>Bangalore, India</span>
+  </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="smtp.js"></script>
 </body>

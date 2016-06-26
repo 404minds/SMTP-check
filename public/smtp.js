@@ -10,6 +10,7 @@ form.addEventListener("submit", function(event) {
     data: $(form).serialize(),
     complete: function(jqXHR, textStatus) {
       var logEl = document.getElementById("log");
+      $('.log_box').show();
       if (jqXHR.status !== 201) {
         var data = jqXHR.responseJSON;
         logEl.innerHTML += '<p>Verification of SMTP credentials failed.';
@@ -21,7 +22,30 @@ form.addEventListener("submit", function(event) {
         if (data.reason) logEl.innerHTML += '<p>Reason: ' + data.reason + '</p>';
       } else {
         logEl.innerHTML += '<p>Success! Your SMTP credentials are correct.</p>';
+        $('#sendMail').show();
       }
     }
   });
 });
+
+$('#sendMail').click(function() {
+  $.ajax({
+    url: "http://localhost:3011/sendMail",
+    type: 'post',
+    dataType: 'json',
+    data: $(form).serialize(),
+    complete: function(jqXHR, textStatus) {
+      var logEl = document.getElementById("log");
+      if (jqXHR.status !== 201) {
+        var data = jqXHR.responseJSON;
+        logEl.innerHTML += '<p>Unable to send test mail</p>';
+      } else {
+        logEl.innerHTML += '<p>Congratulations! Test mail sent successfully.</p>';
+      }
+    }
+  });
+});
+
+$('.eraser').click(function() {
+  $("#log").empty();
+})
