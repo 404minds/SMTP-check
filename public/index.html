@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SMTP Checker</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test your SMTP mail server configuration for free. Verify and ensure your settings by sending a test email. Quick and handy tool for setting up services using SMTP mail servers.">
+  <meta name="keywords" content="smtp, online, check, mx, mail, server, free, test, SMTP checker, SMTP test">
+  <meta name="author" content="404Minds">
+  <title>SMTP Checker - Test your mail server (MX)</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,300,500' rel='stylesheet' type='text/css'>
 </head>
@@ -13,6 +19,8 @@
     </div>
   </header>
   <div class="wrapper">
+    <p class="detail">Test your SMTP mail server configuration.<br>
+    Just fill the form below and hit the ‘Check’ button. Don’t worry, we will not store any information that you provide.</p>
     <div class="form-wrapper">
       <form id="check_form" method="post">
         <div class="form-group"><label>Host</label><input type="text" name="host" ></div>
@@ -22,16 +30,27 @@
         <div class="form-group"><label>Password</label><input type="password" name="password" ></div>
         <div class="form-group"><label>From Email</label><input type="email" name="from_email"></div>
         <div class="form-group"><label>To Email</label><input type="email" name="to_email" ></div>
-        <div class="form-group"><label></label><button type="submit">Check</button></div>
+        <div class="form-group">
+          <label></label>
+          <button type="submit">Check</button>
+          <button type="button" id="sendMail">Send Test Mail</button>
+        </div>
       </form>
       <div class="log_box">
-        <div class="log_header"><span>Console</span></div>
+        <div class="log_header"><span>Console</span><span class="eraser" id="eraser">Clear</span></div>
         <div id="log"></div>
       </div>
+      <p class="issueMsg">Having issues? <a href="https://github.com/404minds/SMTP-check/issues">Report issue.</a></p>
     </div>
   </div>
-  <footer></footer>
+  <footer><p>Made with love by <a href="http://404minds.com/">404Minds</a></p>
+  <span>Bangalore, India</span>
+  </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="smtp.js"></script>
+  <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+    heap.load("3758581432");
+  </script>
 </body>
 </html>

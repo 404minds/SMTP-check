@@ -30,9 +30,10 @@ header {
 }
 
 .wrapper {
-  padding: 100px;
+  padding: 50px 100px;
   text-align: center;
   overflow: hidden;
+  margin-top: 30px;
 }
 .form-wrapper {
   display: flex;
@@ -87,17 +88,23 @@ input[type="checkbox"] {
 
 button {
   padding: 10px 20px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.5);
   border-radius: 3px;
   font-size: 16px;
   margin-top: 15px;
   color: rgba(0,0,0,0.5);
+  margin-right: 15px;
+  background-color: rgba(0,0,0,0.02);
 }
 
 button:hover {
   border: 1px solid rgba(0,0,0,0.05);
   background-color: rgba(0,0,0,0.05);
   color: #000000;
+}
+
+#sendMail {
+  display: none;
 }
 
 .log_box {
@@ -109,6 +116,7 @@ button:hover {
   margin-top: 50px;
   padding: 0 10px;
   padding-bottom: 20px;
+  display: none;
 }
 
 .log_header {
@@ -116,6 +124,22 @@ button:hover {
   text-align: left;
   padding: 10px 0;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.eraser {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.55);
+  font-style: bold;
+  cursor: pointer;
+}
+
+#log {
+  text-align: left;
 }
 
 span {
@@ -124,3 +148,55 @@ span {
   color: rgba(0,0,0,0.45);
 
 }
+
+.error {
+  color: #f81b03;
+}
+.detail {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.45);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.issueMsg {
+  margin-top: 50px;
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.45);
+}
+
+footer {
+  background-color: rgba(0,0,0,0.5);
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+footer p {
+  font-style: italic;
+  display: inline-block;
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+}
+footer a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+
+}
+
+footer span {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+
+}
+
+
