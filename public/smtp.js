@@ -4,7 +4,7 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
 
   $.ajax({
-    url: "http://localhost:3011/check",
+    url: "/check",
     type: 'post',
     dataType: 'json',
     data: $(form).serialize(),
