@@ -30,7 +30,7 @@ form.addEventListener("submit", function(event) {
 
 $('#sendMail').click(function() {
   $.ajax({
-    url: "http://localhost:3011/sendMail",
+    url: "/sendMail",
     type: 'post',
     dataType: 'json',
     data: $(form).serialize(),
